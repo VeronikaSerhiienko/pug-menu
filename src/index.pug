@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title pug-menu
+    link(rel='stylesheet', href='style/main.css')
+  body
+    div.menu
+      input( class="menu__input" type="checkbox" id="checked")
+      label(class="menu__label" for="checked")
+      nav.menu__list
+        ul 
+          - var values = ["home","about","work","services","team","contract"];
+           each val in values
+            li(class="menu__item")
+              a(class="menu__link" href="#")= val
+          li.menu__item
+            - var username = { authorised: true }
+              if username.authorised == true
+                a(class="menu__link" href="#") logout
+              else 
+                a(class="menu__link" href="#") login 
+      div.menu__contacts
+        a(class="menu__contacts-link" href="tel:9125551234") (912) 555-1234
+        a(class="menu__contacts-link" href="mailto:office@website.com") office@website.com
+      ul.menu__social
+        - var values = ["f","t","g"];
+          each val in values             
+            li(class="menu__social-item")
+              a(class="menu__social-link" href="#")= val
