@@ -1,0 +1,126 @@
+.menu {
+  min-width: 320px;
+  width: 35%;
+  margin: 0 auto;
+  padding-top: 34px;
+  padding-bottom: 62px;
+  background: $menu-background;
+  font-size: $text-size;
+  letter-spacing: $letter-space;
+  line-height:$line-h;
+  position: relative;
+
+  &__input {
+    position: absolute;
+    bottom: 9999px;
+  }
+  
+  &__label {
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 13px;
+      height: 13px;
+      background-image: url(../images/close.png);
+    }
+
+    &:hover {
+      background-color: $text-hover;
+      box-shadow: 0 0 10px $text-hover;
+      opacity: 0.5;
+    }
+  }
+
+  &__list {
+    padding-top: 20px;
+    padding-left: 80px;
+  }
+
+  &__item {
+    list-style-type: none;
+    margin-bottom: 36px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $text-color;
+    transition: 0.5s;
+    text-transform: uppercase;
+
+    &:hover {
+     color: $text-hover;
+     text-decoration: underline;
+    }   
+  }
+
+  &__contacts {
+    margin-top: 50px;
+    position: relative;
+    padding-left: 100px;
+
+    &-link {
+      color: $text-color;
+      text-decoration: none;
+      font-size: 0.9em;
+      display: block;
+      margin-bottom: 10px;
+      transition: 0.5s;
+
+        &:last-child {
+          margin-bottom: 0;
+        }      
+
+        &:hover {
+          color: $text-hover;
+          text-decoration: underline;
+        }  
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      height: 2px;
+      width: 160px;
+      background: linear-gradient(to left, $text-color, transparent);      
+      position: absolute;
+      top: -25px;      
+    }
+  }
+
+  &__social {
+    display: flex;
+    margin-top: 40px;
+    padding-left: 100px;
+
+    &-item {
+      list-style-type: none;
+      margin-right: 10px;
+
+      &:last-child {
+          margin-right: 0;
+      } 
+    }
+
+    &-link {
+      color: $text-color;
+      text-decoration: none;     
+      padding: 5px 13px;
+      border: 1px solid  $text-color;
+      border-radius: 50%;      
+      transition: 0.5s;
+
+      &:hover {
+        background: $text-hover;
+        border-color: $text-hover;
+      }
+    }
+  }
+}

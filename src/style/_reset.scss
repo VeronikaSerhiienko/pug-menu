@@ -1,0 +1,19 @@
+html,
+body,
+div,
+ul,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@import "variables";
+
+body {
+  font-family: $font-stack;
+  color: $text-color;
+}
